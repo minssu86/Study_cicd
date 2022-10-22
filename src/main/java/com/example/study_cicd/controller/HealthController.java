@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class CicdController {
+public class HealthController {
 
     @GetMapping("/test")
     public String test(){
-        return "ok!";
+        return "OK!";
     }
 
 }
