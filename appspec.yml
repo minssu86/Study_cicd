@@ -25,6 +25,8 @@
 #permissions:
 #  contents: read
 #
+#env:
+#  PROJECT_NAME: test-deploy
 #jobs:
 #  build:
 #    runs-on: ubuntu-latest
