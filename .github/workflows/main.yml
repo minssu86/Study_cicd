@@ -15,8 +15,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-#     env:
-#       working-directory: ./BE
+    env:
+      working-directory: ./BE
       
     steps:
       - name: Checkout
