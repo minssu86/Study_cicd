@@ -55,5 +55,5 @@ jobs:
         working-directory: ${{env.working-directory}}
       
       - name: Code Deploy
-        run: aws deploy create-deployment --application-name cicd-deploy --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name cicd-test-deploy
+        run: aws deploy create-deployment --application-name cicd-deploy --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name cicd-test-deploy --s3-location bucket=${{ secrets.S3_BUCKET_NAME }},bundleTyp=zip,key=$PROJECT_NAME/$GITHUB_SHA.zip
         working-directory: ${{env.working-directory}}
