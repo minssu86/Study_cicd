@@ -55,5 +55,5 @@ jobs:
         working-directory: ${{env.working-directory}}
       
       - name: Code Deploy
-        run: aws deploy create-deployment --application-name cicd-deploy --deployment-config-name CodeDeployDefault --deployment-group-name cicd-test-deploy
+        run: aws deploy create-deployment --application-name cicd-deploy --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name cicd-test-deploy
         working-directory: ${{env.working-directory}}
